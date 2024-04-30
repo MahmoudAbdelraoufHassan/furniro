@@ -1,0 +1,302 @@
+<div class="checkout_home" >
+   <div class="img">
+    <img src="../../assets/check-img.jpg" alt="" width="100%" height="300px" srcset="">
+   
+   </div>
+   <div class="links">
+    <div class="d-flex justify-content-center fw-bold">Checkout</div>
+        <a href="/">Home </a>
+        <span class="arrow fs-3  me-2">&#8250;</span>
+    <a href="checkout ">checkout</a>
+</div>
+
+</div>
+
+<section class="checkout">
+    <div class="container1">
+        <form action="asd.html" method="get" [formGroup]="dataUser" (ngSubmit)="handlePlaceOrder()">
+        <div class="grid_content">         
+            <div class="form_box">
+                <h2>Billing datails</h2>
+                   <!-- box_input1 -->
+                <div class="box_input1">
+                    <div class="box_input-left">
+                        <div class="labels">
+                            <label for="firstName">First Name</label>
+                        </div>
+                        <input type="text" id="firstName" name="firstName"  formControlName="firstName">
+                        @if(dataUser.controls["firstName"].touched && dataUser.controls["firstName"]){
+                            <div id="name" class="form-text text-danger">
+                              @if (dataUser.controls["firstName"].errors?.["required"]) {
+                              <div>this field is required</div>
+                              } @if(dataUser.controls["firstName"].errors?.["minlength"] ) {
+                              <div> lastName is short </div>
+                              }@else if( dataUser.controls["firstName"].errors?.["pattern"]) {
+                              <div>Plz! enter valid name</div>
+                              }
+                            </div>
+                            }
+                    </div>
+                    <div class="box_input-right">
+                        <div class="labels">
+                            <label for="lastName">Last Name</label>
+                        </div>
+                        <input type="text" id="lastName" name="lastName" formControlName="lastName">
+                        @if(dataUser.controls["lastName"].touched && dataUser.controls["lastName"]){
+                            <div id="name" class="form-text text-danger">
+                              @if (dataUser.controls["lastName"].errors?.["required"]) {
+                              <div>this field is required</div>
+                              } @if(dataUser.controls["lastName"].errors?.["minlength"] ) {
+                              <div> lastName is short </div>
+                              }@else if( dataUser.controls["lastName"].errors?.["pattern"]) {
+                              <div>Plz! enter valid name</div>
+                              }
+                            </div>
+                            }
+                    </div>
+                </div>
+                <!-- box_input2-comany -->
+                <div class="box_input2">
+                    <div class="box_input-left">
+                        <div class="labels" style="margin-top: 15px;">
+                            <label for="comoanyName" > Comoany Name (Optional )</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="comoanyName" name="comoanyName">
+                        </div>
+                    </div>
+                </div>
+                <!-- box_input3-country -->
+                <div class="box_input3">
+                    <div class="box_input-left">
+                        <div class="labels" style="margin-top: 15px;">
+                            <label for="countryName" > Country / Region</label>
+                        </div>
+                        <div class="select country">
+                            <select name="country" id="countryName" formControlName="country">
+                                <option value="sirLanka">Sir Lanka</option>
+                                <option value="val2">1</option>
+                                <option value="val3">1</option>
+
+                            </select>
+                            @if(dataUser.controls["country"].touched && dataUser.controls["country"]){
+                                <div id="name" class="form-text text-danger">
+                                  @if (dataUser.controls["country"].errors?.["required"]) {
+                                  <div>this field is required</div>      
+                                  }
+                                </div>
+                                }
+
+                        </div>
+                    </div>
+                </div>
+                <!-- box_input4-street -->
+                <div class="box_input4">
+                    <div class="box_input-left">
+                        <div class="labels" style="margin-top: 15px;">
+                            <label for="street" >  Street address </label>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="street" name="street" formControlName="street">
+                            @if(dataUser.controls["street"].touched && dataUser.controls["street"]){
+                                <div id="name" class="form-text text-danger">
+                                  @if (dataUser.controls["street"].errors?.["required"]) {
+                                  <div>this field is required</div>
+                                  } @if(dataUser.controls["street"].errors?.["minlength"] ) {
+                                  <div> street is short </div>
+                                  }@else if( dataUser.controls["street"].errors?.["pattern"]) {
+                                  <div>Plz! enter valid street</div>
+                                  }
+                                </div>
+                                }
+                        </div>
+                    </div>
+                </div>
+                <!-- box_input5-city -->
+                <div class="box_input5">
+                    <div class="box_input-left">
+                        <div class="labels" style="margin-top: 15px;">
+                            <label for="city" >  Town / City </label>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="city" name="city" formControlName="city">
+                            @if(dataUser.controls["city"].touched && dataUser.controls["city"]){
+                                <div id="name" class="form-text text-danger">
+                                  @if (dataUser.controls["city"].errors?.["required"]) {
+                                  <div>this field is required</div>
+                                  } @if(dataUser.controls["city"].errors?.["minlength"] ) {
+                                  <div> city is short </div>
+                                  }@else if( dataUser.controls["city"].errors?.["pattern"]) {
+                                  <div>Plz! enter valid city</div>
+                                  }
+                                </div>
+                                }
+                        </div>
+                    </div>
+                </div>
+              <!-- box_input6-Province-->
+              <div class="box_input6">
+                <div class="box_input-left">
+                    <div class="labels" style="margin-top: 15px;">
+                        <label for="Province" > Province </label>
+                    </div>
+                    <div class=" Province">
+                        <select name="Province" id="Province">
+                            <option value="">Western Province</option>
+                            <option value="">1</option>
+                            <option value="">1</option>
+
+                        </select>
+
+                    </div>
+                </div>
+                 </div>
+                <!-- box_input7-zipcode -->
+                <div class="box_input7">
+                    <div class="box_input-left">
+                        <div class="labels" style="margin-top: 15px;">
+                            <label for="zipcode" >  Zip code </label>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="zipcode" name="zipCode" formControlName="zipCode">
+                            @if(dataUser.controls["zipCode"].touched && dataUser.controls["zipCode"]){
+                                <div id="name" class="form-text text-danger">
+                                  @if (dataUser.controls["zipCode"].errors?.["required"]) {
+                                  <div>this field is required</div>
+                                  } @if(dataUser.controls["zipCode"].errors?.["minlength"] ) {
+                                  <div> code is short </div>
+                                  }@else if( dataUser.controls["zipCode"].errors?.["pattern"]) {
+                                  <div>Plz! enter valid code</div>
+                                  }
+                                </div>
+                                }
+                        </div>
+                    </div>
+                </div>
+                 <!-- box_input8-Phone -->
+                 <div class="box_input8">
+                    <div class="box_input-left">
+                        <div class="labels" style="margin-top: 15px;">
+                            <label for="phone" >  Phone </label>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="phone" name="phnoe" formControlName="phone">
+                            @if(dataUser.controls["phone"].touched && dataUser.controls["phone"]){
+                                <div id="name" class="form-text text-danger">
+                                  @if (dataUser.controls["phone"].errors?.["required"]) {
+                                  <div>this field is required</div>
+                                  } @if(dataUser.controls["phone"].errors?.["minlength"] ) {
+                                  <div> phone length is short </div>
+                                  }@else if( dataUser.controls["phone"].errors?.["pattern"]) {
+                                  <div>Plz! enter valid phone</div>
+                                  }
+                                </div>
+                                }
+                        </div>
+                    </div>
+                </div>
+                <!-- box_input9-email-->
+                <div class="box_input9">
+                    <div class="box_input-left">
+                        <div class="labels" style="margin-top: 15px;">
+                            <label for="email" >  Email </label>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="eamil" name="email" formControlName="email">
+                            @if(dataUser.controls["email"].touched && dataUser.controls["email"]){
+                                <div id="name" class="form-text text-danger">
+                                  @if (dataUser.controls["email"].errors?.["required"]) {
+                                  <div>this field is required</div>
+                                  } @if(dataUser.controls["email"].errors?.["minlength"] ) {
+                                  <div> email length is short </div>
+                                  }@else if( dataUser.controls["email"].errors?.["pattern"]) {
+                                  <div>Plz! enter valid email</div>
+                                  }
+                                </div>
+                                }
+                        </div>
+                    </div>
+                </div>
+                <!-- box_input10-->
+                    <div class="box_input10">
+                        <div class="box_input-left">
+                            <div class="labels" style="margin-top: 15px;">
+                                <label for="addtional" >   </label>
+                            </div>
+                            <div class="input">
+                                <input type="text" id="addtional" placeholder="Addtional Information" name="addtional">
+                            </div>
+                        </div>
+                    </div>   
+            </div>
+            <div class="data_box">
+            <!-- Details about user order  -->
+                <div class="data_box-header">
+                    <h2>Product</h2>
+                    <h2>Subtotal</h2>
+                </div>
+              <!-- Details about order  -->
+                <div class="order_detail border-bottom">
+                    <div class="box1 mb-2 d-flex justify-content-between ">
+                        <div class="product_name ">Asgarad <span>x1</span></div>
+                        <div class="product_price">Rs. 250,000.00</div>
+                    </div>
+                 <div class="box1 mb-2 d-flex justify-content-between ">
+                    <div class="product_subtotal">Subtotal</div>
+                    <div class="product_subtotal-price">Rs. 250,000.00</div>
+                 </div>
+                 <div class="box1 mb-2 d-flex justify-content-between ">
+                    <div class="product_total">Total</div>
+                    <div class="product_total-price">Rs. 250,000.00</div>
+                 </div>
+                
+
+
+
+                </div>
+                <!--start terms and method payment -->
+                <div class="method_payment">
+                    <label>
+                        <input type="radio" class="hide" name="payment" value="credit" checked>
+                        <i class="fa fa-fw fa-circle"></i><span style="cursor: pointer;">&nbsp;Direct Bank Transfer</span>
+                      </label>
+                      <div>Make your payment directly into our bank account.
+                         Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</div>
+                      <br>
+                      <label>
+                        <input type="radio" class="hide" name="payment" value="credit">
+                        <i class="fa fa-fw fa-circle"></i><span style="cursor: pointer;">&nbsp;Direct Bank Transfer</span>
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" class="hide" name="payment" value="cash ">
+                        <i class="fa fa-fw fa-circle"></i><span style="cursor: pointer;">&nbsp;Cash On Delivery </span>
+                      </label>
+                    </div>
+                 <div class="terms mt-3">        
+                        Your personal data will be used to support your
+                         experience throughout this website, to manage access 
+                         to your account, and for other purposes described in our <strong><a href="checkout">privacy policy.</a> </strong>
+                     </div>
+                     <div class="place_order mt-4 d-flex justify-content-center">
+                        <a href="/checkout" >
+
+                            <button type="submit"  class="btn btn-outline-dark rounded-3 ps-5 pe-5 pt-3 pb-3">Place Order</button>
+
+                        </a>
+
+
+                     </div>
+
+
+
+                <!-- end terms and method payment -->
+            </div>
+
+
+
+        </div>
+    </form>
+    </div>
+</section>
+<app-scroll-up></app-scroll-up>

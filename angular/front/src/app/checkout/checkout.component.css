@@ -1,0 +1,169 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+section{
+        font-family: "Poppins", sans-serif;
+}
+.checkout_home{
+    position: relative;
+    height: 300px;
+    font-family: "Poppins", sans-serif;
+
+}
+.checkout_home .links{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 25px;
+}
+.checkout_home .links a:nth-child(2){
+font-weight: bold;
+}
+.checkout_home .links a{
+    font-size: 20px ;
+}
+.checkout{
+    margin-top: 100px;
+}
+section .container1{
+    width: 90%;
+    margin: auto;
+}
+.grid_content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+.grid_content .form_box .box_input1{
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+    column-gap: 15px;
+}
+.grid_content .form_box .box_input1 input{
+width: 100%;
+}
+.grid_content .form_box  input,
+.grid_content .form_box  select{
+    outline: none;
+    border: none;
+    margin-top: 10px;
+    padding: 15px 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(22, 20, 20);
+
+}
+.grid_content .form_box  input,
+.grid_content .form_box  select
+{
+width: 100%;
+}
+/* order details */
+.data_box-header{
+    display: flex;
+    justify-content: space-between;
+
+}
+.place_order button{
+padding-left: 80px !important;
+padding-right: 80px !important;
+
+}
+/* ********style of radio input of payment********** */
+.hide { display: none; }
+a{
+    text-decoration: none;
+    color: black;
+}
+input[type="radio"] + .fa,
+input[type="radio"] + label > .fa { cursor: pointer; }
+/* Unchecked */
+input[type="radio"] + .fa-check-circle:before,
+input[type="radio"] + label > .fa-check-circle:before { content: "\f111"; } 
+input[type="radio"] + .fa-circle:before,
+input[type="radio"] + label > .fa-circle:before { content: "\f1db"; } 
+/* Checked */
+input[type="radio"]:checked + .fa-check-circle:before,
+input[type="radio"]:checked + label > .fa-check-circle:before { content: "\f058" }
+input[type="radio"]:checked + .fa-circle:before,
+input[type="radio"]:checked + label > .fa-circle:before { content: "\f111"; }
+/*----------------------- responsive media------------------------------------------------- */
+/* media query for 992px */
+@media screen and (min-width:992px) {
+    .grid_content{
+        column-gap: 60px !important;
+
+    }
+
+}
+/* media query for 768px */
+@media screen and (max-width:768px) {
+    .grid_content .form_box .box_input1{
+        display: block;
+    }
+    .grid_content .form_box  input,
+    .grid_content .form_box  select{
+width: 100%;
+}
+    
+}
+/* media query for md 550px */
+@media screen and (max-width:550px) {
+   section .container1 .grid_content{
+        grid-template-columns: repeat(1,1fr);
+        gap: 10px;
+    }
+    section .container1 .grid_content .data_box{
+order: 1;
+    }
+    .checkout_home .links {
+        width: 100%;
+        text-align: center;
+        top: 57%;
+
+    }
+   
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

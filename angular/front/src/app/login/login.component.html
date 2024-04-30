@@ -1,0 +1,79 @@
+<section class="signin  ">
+    <div class="conatiner1">
+        <div class="grid_content">
+            <div class="box_img">
+                <img src="../../assets/signin.png" width="300px" alt="">
+            </div>
+            <div class="box_form d-flex justify-content-center align-items-center">
+                <div class="all_content ">
+                    <div class="header_form">
+                        <h3 class="fw-bold fs-2">Login</h3>
+                        <p class="text-muted create_account-title">Login your account in a seconds</p>
+                       </div>
+                    <form action="" method="post" [formGroup]="loginForm" (ngSubmit)="login()">
+                        
+                        <div class="all_inputs ">
+                         
+                    
+                            <div class="input1 email">
+                                <input type="text" placeholder="Email Address:" name="EmailAddress" formControlName="email">
+                                @if(loginForm.controls["email"].touched && loginForm.controls["email"]){
+                                    <div id="email" class="form-text text-danger">
+                                      @if (loginForm.controls["email"].errors?.["required"]) {
+                                      <div class="ms-2">this field is required</div>
+                                      } @if(loginForm.controls["email"].errors?.["minlength"] ) {
+                                      <div> email is short </div>
+                                      }@else if( loginForm.controls["email"].errors?.["pattern"]) {
+                                      <div>enter valid email</div>
+                                      }
+                                    </div>
+                                    }
+                            </div>
+                            <div class="input1 password">
+                                <input type="text" placeholder="Password:" name="Password" formControlName="password" (keyup)="hideError()">
+                                @if(loginForm.controls["password"].touched && loginForm.controls["password"]){
+                                    <div id="password" class="form-text text-danger">
+                                      @if (loginForm.controls["password"].errors?.["required"]) {
+                                      <div class="ms-2">this field is required</div>
+                                      } @if(loginForm.controls["password"].errors?.["minlength"] ) {
+                                      <div> password is short </div>
+                                      }@else if( loginForm.controls["password"].errors?.["pattern"]) {
+                                      <div>enter valid password</div>
+                                      }
+                                    </div>
+                                    }
+        
+                            </div>
+                            <div class="error_apii" *ngIf="hideErrorApi"> {{loginError}}</div>
+
+                            <div class="input1 d-flex  align-items-center">
+                                <input type="checkbox" name="agree" class="terms " id="keeplogged" >
+                                <div class="forget_password d-flex justify-content-between w-100">
+                                    <label class="ms-2"  for="keeplogged">Keep me logged in </label>
+                                    <span><a href="">Forget password</a></span>
+                                </div>
+                            </div>
+                            <div class="input1">
+                                <button type="submit" class="text-white create_account">Login</button>
+                            </div> 
+                        </div>
+                       
+                    </form>
+                    <!-- have account -->
+                    <div class="have_account">
+                        <span>Don’t have an account? <a href="/signin">Sign up</a></span>
+                    </div>
+                        
+                </div>
+               
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div *ngIf="loading;">
+<div>...</div> 
+ </div>

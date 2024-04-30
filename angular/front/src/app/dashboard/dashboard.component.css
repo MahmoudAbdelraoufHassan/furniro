@@ -1,0 +1,27 @@
+@import url('https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css');
+.container-dash {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.sidebar {
+    flex: 1;
+    background-color: #F3F3F3;
+}
+.main {
+    flex: 4;
+    padding: 20px;
+}
+.main-header  h3{
+font-size: 30px;
+font-weight: 700;
+}
+.main-header p {
+    color: #777;
+}

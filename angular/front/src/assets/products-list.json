@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Wooden chair",
+    "description": "Simple wooden chair with metal legs and light wight",
+    "price": 549,
+    "discountPercentage": 12.96,
+    "rating": 4.69,
+    "stock": 94,
+    "brand": "Decorate",
+    "category": "single chair",
+    "Image":"https://www.shelbywilliams.com/files/images/4015-wood-arm-chair.jpg",
+    "images": [
+      "https://www.shelbywilliams.com/files/images/4015-wood-arm-chair.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "living room",
+    "description": "Modern living room with two big chairs and sofra",
+    "price": 2500,
+    "discountPercentage": 15.96,
+    "rating": 4.69,
+    "stock": 10,
+    "brand": "living",
+    "category": "living room",
+    "Image":"https://images6.alphacoders.com/348/thumb-1920-348920.jpg",
+    "images": [
+      "https://images6.alphacoders.com/348/thumb-1920-348920.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "dinner",
+    "description": "fantastic dinner room with kitchien machine ",
+    "price": 5500,
+    "discountPercentage": 18.96,
+    "rating": 4.69,
+    "stock": 50,
+    "brand": "dinner",
+    "category": "dinner room",
+    "Image":"https://th.bing.com/th/id/OIP.opgzPzPPXXYqjmfGUtr97QHaFj?rs=1&pid=ImgDetMain",
+    "images": [
+      "https://th.bing.com/th/id/OIP.opgzPzPPXXYqjmfGUtr97QHaFj?rs=1&pid=ImgDetMain"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "childeren corner",
+    "description": "interesting corner for childeren enjoing and sweety",
+    "price": 3250,
+    "discountPercentage": 10.96,
+    "rating": 4.69,
+    "stock": 50,
+    "brand": "Ikea",
+    "category": "childeren room",
+    "Image":"https://i.pinimg.com/originals/a2/cf/5f/a2cf5f07ce0b32332b9c0749c20911a0.jpg",
+    "images": [
+      "https://i.pinimg.com/originals/a2/cf/5f/a2cf5f07ce0b32332b9c0749c20911a0.jpg"
+    ]
+  }
+]

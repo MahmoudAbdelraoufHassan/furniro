@@ -1,0 +1,19 @@
+<div class="component">
+  <h3>Categories</h3>
+  <div class="arrows">
+    <div class="arrow-left">
+      <i class="bx bx-chevron-left" (click)="prev()"></i>
+    </div>
+    <div class="arrow-right">
+      <i class="bx bx-chevron-right" (click)="next()"></i>
+    </div>
+  </div>
+</div>
+
+<div class="carousel" #ele>
+  <div class="slider">
+    <div class="content">
+      <app-category-card> </app-category-card>
+    </div>
+  </div>
+</div>

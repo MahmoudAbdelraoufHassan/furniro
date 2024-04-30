@@ -1,0 +1,269 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+header {
+    position: absolute;
+    display: flex;
+top: 0;
+left: 0;
+width: 100%;
+height: 80px;
+padding: 20px 0;
+transition: 0.3s;
+z-index: 1000;
+}
+header .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-inline: auto;
+}
+
+.logo {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.1em;
+}
+header .group {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+header ul.navigation {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.navigation a {
+    position: relative;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    font-size: 1.1rem;
+    font-weight:500;
+}
+
+.navigation a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #B88E2F;
+    bottom: -2px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: right;
+}
+.navigation a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.icons {
+    gap: 10px;
+}
+.icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    transition: 0.3s;
+    border-bottom-right-radius:0 ;
+    border-bottom-left-radius:0 ;
+
+}
+.icon:hover {
+    cursor: pointer;
+}
+.icon i {
+    font-size: 30px;
+    color: white;
+}
+.dropDown {
+    position: relative;
+}
+.dropDown .profile_menu {
+    position: absolute;
+    background-color: white;
+    width:300px;
+    left :-250px;
+    bottom: -300px;
+    transition: 0.3s;
+    opacity: 0;
+    pointer-events: none;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.dropDown .profile_menu li a {
+    color: black;
+    padding: 15px;
+    display: block;
+    font-size: 18px;
+
+}
+.dropDown .info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 15px;
+}
+.dropDown .profile_img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dropDown .info h3{
+    font-size: 20px;
+}
+.dropDown .info span{
+    font-size: 15px;
+    color: #c9c6c6;
+}
+.dropDown .info .data {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+header .menu {
+    display: none;
+}
+.menu {
+    position: relative;
+}
+  .toggle_menu , 
+ .toggle_close {
+    transition: 0.3s;
+    position: absolute;
+}
+ .icon .toggle_close {
+    opacity: 0; 
+}
+/* ShowIcon */ 
+    .active .toggle_menu {
+        opacity: 0;
+        transform: rotate(90deg);
+    }
+    .active .toggle_close {
+        opacity: 1;
+        transform: rotate(180deg);
+    }
+/* Responsive */
+@media (max-width:992px){
+.logo {
+    order: 1;
+    flex: 2;
+}
+.icons {
+    flex: 1;
+    order: 2;
+}
+nav {
+    order: 3;
+    flex: 100%;
+    transition: 0.1s;
+    align-self: flex-end;
+}
+.header {
+    height: 310px;
+    padding-bottom: 0;
+    overflow: hidden;
+}
+header nav .navigation {
+    gap: 0px;
+}
+header nav {
+    opacity: 0;
+    pointer-events: none;
+}
+.header nav {
+    opacity: 1;
+    pointer-events: all;
+}
+nav .navigation li a{
+    display: block;
+    width: 100%;
+    z-index: 200;
+    padding: 10px 0;
+}
+.navigation a::before {
+    content: "";
+    height: 100%;
+    width: calc(100% + 20px);
+    background: #ececee;
+    bottom: 0px;
+    transform: scalex(0);
+    transition: transform 0.3s linear;
+    z-index: -1;
+    left: -10px;
+    color: white;
+    transform-origin: left;
+}
+header .navigation a:hover::before{
+    color: white;
+    transform:none scaleX(1);
+    transform-origin: left;
+}
+.container {
+    padding: 0 10px;
+    flex-wrap: wrap;
+}
+
+header .menu {
+display: flex;
+}
+header .navigation {
+    display: flex;
+    flex-direction: column;
+    order: -1;
+}
+    .icon {
+        background-color: #FFF3E3;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        transition: 0.3s;
+    }
+    .icon i {
+        font-size: 25px;
+        color: black;
+    }
+}
+/* active */
+.active {
+    background-color: #f6b50ef0;
+}
+.active  i {
+    color: white ;
+}
+.active + .profile_menu {
+    bottom: -250px;
+    opacity: 1;
+    pointer-events: all;
+    /* box-shadow: ; */
+}
+.scrolled {
+    background-color: white;
+    position: fixed;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+}
+.scrolled a{
+    color: black;
+}
+.scrolled i{
+    color: black;
+}

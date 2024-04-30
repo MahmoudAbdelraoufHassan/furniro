@@ -1,0 +1,22 @@
+.charts {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background-color: #F3F3F3;
+
+}
+.chart , .pie {
+    width: 100%;
+    padding: 10px;
+}
+.chart {
+    flex: 3;
+}
+.pie {
+    flex: 1;
+    height: 100%;
+}
+#canvas2 {
+width: 100% !important;
+height: 100% !important;
+}

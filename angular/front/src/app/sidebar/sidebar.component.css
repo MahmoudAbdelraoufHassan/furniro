@@ -1,0 +1,59 @@
+@import url('https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css');
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.header {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.header h2 {
+    font-size: 25px;
+}
+.header h2 span {
+color: #f6b50ef0;
+}
+.sidebar_body ul li a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    color: #133A5E;
+    overflow: hidden;
+}
+.sidebar_body ul li a.active {
+    position: relative;
+    z-index: 20;
+    color: white;
+    transition: 0.3s;
+
+}
+.active::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 5px;
+    background-color: #f6b50ef0;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    z-index: -1;
+}
+ul li a i {
+    margin-right:10px ;
+}
+.sidebar_body ul li a {
+    font-size: 18px;
+}
+
+/* 
+
+#133A5E كحلي
+#faf3ea بيجج
+#F3F3F3 رمادي
+
+*/

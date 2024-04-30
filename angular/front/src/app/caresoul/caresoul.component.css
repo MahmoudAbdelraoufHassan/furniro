@@ -1,0 +1,14 @@
+
+  .carousel {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+  }
+
+.content {
+    display: flex;
+    gap: 20px;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+  }

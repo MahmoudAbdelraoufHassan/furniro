@@ -1,0 +1,51 @@
+<header [ngClass]="{ header: menuActive, scrolled: moved }">
+  <div class="container">
+    <a href="#" class="logo"><span style="color: #f6b50ef0">F</span>URNIRO.</a>
+    <nav>
+      <ul class="navigation">
+        <li><a href="">Home</a></li>
+        <li><a href="">about</a></li>
+        <li><a href="">services</a></li>
+        <li><a href="">blog</a></li>
+        <li><a href="">contact</a></li>
+      </ul>
+    </nav>
+    <div class="icons d-flex align-items-center">
+      <span class="icon">
+        <i class="bx bx-cart"></i>
+      </span>
+      <span class="icon">
+        <i class="bx bx-heart"></i>
+      </span>
+      <div class="dropDown">
+        <span
+          class="icon"
+          [ngClass]="{ active: userActive }"
+          (click)="toggleUser()"
+        >
+          <i class="bx bx-user"></i>
+        </span>
+        <ul class="profile_menu">
+          <li class="info">
+            <div class="profile_img">MA</div>
+            <div class="data">
+              <h3>Mahmoud Ahmed</h3>
+            </div>
+          </li>
+          <li><a href="">Profile</a></li>
+          <li><a href="">Order history</a></li>
+          <li><a routerLink="/dashboard" >Dashboard</a></li>
+          <li><a href="">Log out</a></li>
+        </ul>
+      </div>
+      <span
+        class="icon menu"
+        [ngClass]="{ active: menuActive }"
+        (click)="toggleMenu()"
+      >
+        <i class="bx bx-menu toggle_menu"></i>
+        <i class="bx bx-x toggle_close"></i>
+      </span>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.signin{
+    height: 100vh;
+    width: 100vw;
+    font-family: "Poppins", sans-serif;
+
+}
+a{
+    text-decoration: none;
+}
+.signin img{
+    width: 100% !important;
+    height: 100vh;
+
+}
+ .conatiner1{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+.grid_content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 100vh;
+    column-gap: 30px;
+}
+form .input1{
+    margin-bottom: 20px;
+}
+form .input1 input{
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    border: 1px solid gray;
+    border-radius: 8px ;
+
+
+}
+.create_account-title{
+  font-size: 13px !important;
+}
+form .input1 button{
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    border: 1px solid gray;
+    border-radius: 10px ;
+    background-color: blueviolet;
+
+
+}
+form  .terms{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.create_account{
+    width: 90% !important;
+    transition: .5s back-ground;
+ }
+.terms + span{
+    font-size: 12px;
+
+}
+.error_api{
+    color: red;
+    margin-left: 10px;
+    font-size: 14px;
+}
+/* mdeia */
+@media screen and (max-width:550px) {
+    .all_content{
+        width: 100%;
+
+    }
+    .signin{
+        width: initial;
+    }
+    .box_img{
+        display: none;
+    }
+    .grid_content{
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+    form .input1 input{
+        padding: 10px 15px;
+    }
+  
+    form .input1 input:not(.terms){
+        width: 100%;
+    }
+    form  .terms + span{
+        width: initial!important;
+    }
+    .create_account{
+        width: 100% !important;
+     }
+     
+}
+@media screen and (max-width:660px) {
+    .all_inputs{
+        width: initial !important;
+    }
+    .create_account{
+        width: 100% !important;
+     }
+
+}
+@media screen and (min-width:768px) {
+   
+
+}
+.create_account:hover{
+transition: .5s back-ground;
+    background-color: rgb(94, 58, 126) !important;
+ }
