@@ -1,0 +1,113 @@
+<div class="shop mt-5">
+  <div class="continer">
+    <div class="row">
+      <div class="Filter-Side">
+        <input type="text" placeholder="Search" id="search" />
+        <div class="filter-by">
+          <h3>Filter By</h3>
+          <div class="price">
+            <p>Price</p>
+            <input type="range" id="rangeInput" />
+          </div>
+          <div class="categories">
+            <p>Categories</p>
+            <ul class="menu">
+              <li><a href="" class="active">All</a></li>
+              <li><a href="">Sofas</a></li>
+              <li><a href="">Lambs</a></li>
+              <li><a href="">Tables</a></li>
+              <li><a href="">Doors</a></li>
+              <li><a href="">Darwers</a></li>
+              <li><a href="">Chairs</a></li>
+            </ul>
+          </div>
+          <div class="Colors">
+            <p>Color</p>
+            <ul class="menu">
+              <li><a href="" class="active">All</a></li>
+              <li><a href="">White</a></li>
+              <li><a href="">Blue</a></li>
+              <li><a href="">Brown</a></li>
+              <li><a href="">Black</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id="prod">
+      @for (item of products; track $index) {
+      <div class="col" style="position: relative">
+        <div class="product-box position-relative">
+          <div
+            id="btns"
+            style="
+              position: absolute;
+              display: flex;
+              gap: 50px;
+              justify-content: center;
+              width: 100%;
+              padding-top: 20px;
+            "
+          >
+            <a
+              href=""
+              style="
+                color: black;
+                background-color: white;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+              ><i class="bx bx-cart" style="font-size: 35px"></i
+            ></a>
+
+            <a
+              href=""
+              style="
+                color: black;
+                background-color: white;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+              ><i class="bx bxs-low-vision" style="font-size: 35px"></i
+            ></a>
+
+            <a
+              href=""
+              style="
+                color: black;
+                background-color: white;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+              ><i class="bx bx-heart" style="font-size: 35px"></i
+            ></a>
+          </div>
+
+          <img [src]="item.Image" [alt]="item.title" class="img-fluid" />
+        </div>
+        <div class="product-info">
+          <div class="product-name">
+            <h3>{{ item.description }}</h3>
+          </div>
+          <div class="product-price">
+            $ <span>{{ item.price }}</span>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

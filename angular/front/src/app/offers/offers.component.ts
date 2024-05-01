@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import productJson from '../../assets/products-list.json';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-offers',
   standalone: true,
-  imports: [],
+  imports: [RouterLink , RouterLinkActive],
   templateUrl: './offers.component.html',
   styleUrl: './offers.component.css'
 })

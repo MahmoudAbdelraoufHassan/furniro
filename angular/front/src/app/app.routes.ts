@@ -14,16 +14,18 @@ import { AddCategoryComponent } from './add-category/add-category.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
+import { ProductsComponent } from './products/products.component';
 
 
 
 export const routes: Routes = [
-    { path: '', component: SigninComponent },
+    { path: '', component: HomeComponent },
     { path: 'home', component: HomeComponent ,canActivate:[AuthGuard]},
     { path: '',   redirectTo: '/home', pathMatch: "full" },
     { path: 'checkout', component: CheckoutComponent },
-    { path: 'signin', component: SigninComponent },
-    { path: 'login', component: LoginComponent},
+    { path: 'signin', component: SigninComponent , title: 'Sign Up' },
+    { path: 'login', component: LoginComponent , title: 'login' },
+    {path: 'Products', component: ProductsComponent , title: 'Products'},
     {path : "Addproduct", component : AddProductComponent}, 
     {path : "AddCategory", component : AddCategoryComponent},
     {path : "dashboard", children : [

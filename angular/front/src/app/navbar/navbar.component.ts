@@ -1,14 +1,25 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { LoginService } from '../services/login.service';
+
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule ,RouterLink , RouterLinkActive],
+  imports: [CommonModule ,RouterLink , RouterLinkActive ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+
+ 
+   
+
+  ngOnInit(){
+    
+    
+  }
+
   userActive: boolean = false;
   menuActive:boolean = false;
   moved:boolean = false;
@@ -29,5 +40,7 @@ export class NavbarComponent {
   onScroll() {
     this.moved = window.scrollY > 300;
   }
+
+
 }
 

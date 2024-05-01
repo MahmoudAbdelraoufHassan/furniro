@@ -24,7 +24,7 @@ class ProductController extends Controller
             $product->imageUrls = $imageUrls;
         });
 
-// Return the modified products
+        // Return the modified products
         return $products;
     }
 
@@ -67,17 +67,18 @@ class ProductController extends Controller
                 $imageName = time() . '_' . $image->getClientOriginalName();
                 $image->storeAs('public/images', $imageName);
                 $imagePath = 'storage/images/' . $imageName;
-                $imagesData[] = [
+                $imagesData = [
                     'product_id' => $product->id,
                     'filename' => $imageName,
                     'path' => $imagePath,
                 ];
+
             }
 
             ProductImages::insert($imagesData);
         }
 
-        return response()->json(['message' => 'Product created successfully', 'product' => $product , 'related_images'=>$imagesData]);
+        return response()->json(['message' => 'Product created successfully', 'product' => $product, 'related_images' => $imagesData]);
     }
 
     /**
@@ -95,7 +96,7 @@ class ProductController extends Controller
         // Perform the search
         $query = $request->input('query');
         $products = Product::where('title', 'like', "%{$query}%")->get();
-//
+        //
 //        // Return search results
         return response()->json(['products' => $products]);
     }
@@ -141,7 +142,7 @@ class ProductController extends Controller
             $file = $request->file('thumbnail');
             $filename = $file->getClientOriginalName();
             $path = $file->storeAs('uploads', $filename, 'public');
-            $url = Storage::disk('public')->url('uploads/'.$filename);
+            $url = Storage::disk('public')->url('uploads/' . $filename);
 
             // Update the product's thumbnail URL
             $product->thumbnail = $url;

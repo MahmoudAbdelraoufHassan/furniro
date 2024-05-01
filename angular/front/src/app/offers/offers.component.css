@@ -107,11 +107,11 @@ color: #133A5E;
     .products{
         display: flex;  
         flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
 
     }
     .products .col{
-        flex-basis: calc(25% - 25px);
+        flex-basis: calc(20% - 25px);
         
     }
 } 

@@ -4,6 +4,31 @@
     font-family: 'Poppins', sans-serif;
     margin: 0;
 }
+
+.btn-white{
+    background-color: white !important;
+    color: #B88E2F;
+    padding: 10px 15px;
+    border: none;
+}
+.btn-white:hover{
+    color: white;
+    background-color: #B88E2F !important;
+}
+
+.btn-dark:hover{
+    color: #B88E2F;
+    background-color: white !important;
+}
+
+.btn-dark{
+    background-color: #B88E2F !important;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+
+}
+
 header {
     position: absolute;
     display: flex;

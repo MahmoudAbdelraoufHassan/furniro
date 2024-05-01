@@ -1,106 +1,146 @@
-<section class="signin  ">
-    <div class="conatiner1">
-        <div class="grid_content">
-            <div class="box_img">
-                <img src="../../assets/signin.png" width="300px" alt="">
-            </div>
-            <div class="box_form d-flex justify-content-center align-items-center">
-                <div class="all_content ">
-                    <div class="header_form">
-                        <h3 class="fw-bold fs-2">Sign in</h3>
-                        <p class="text-muted create_account-title">Create your account in a seconds</p>
-                       </div>
-                    <form action="" method="post" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
-                        <div class="all_inputs ">
-                            <div class="input1 firstName">
-                                <input type="text" placeholder="First Name:"  name="FirstName" formControlName="name">
-                                <div class="error_api">{{registrationErrorName}}</div>
-                                @if(registrationForm.controls["name"].touched && registrationForm.controls["name"]){
-                                    <div id="name" class="form-text text-danger">
-                                      @if (registrationForm.controls["name"].errors?.["required"]) {
-                                      <div class="ms-2">this field is required</div>
-                                      } @if(registrationForm.controls["name"].errors?.["minlength"] ) {
-                                      <div> name is short </div>
-                                      }@else if( registrationForm.controls["name"].errors?.["pattern"]) {
-                                      <div>Plz! enter valid name</div>
-                                      }
-                                    </div>
-                                    }
-                            </div>
-                            <div class="input1 lastName">
-                                <input type="text" placeholder="Last Name:" name="LastName" formControlName="LastName">
-                                @if(registrationForm.controls["LastName"].touched && registrationForm.controls["LastName"]){
-                                    <div id="LastName" class="form-text text-danger">
-                                      @if (registrationForm.controls["LastName"].errors?.["required"]) {
-                                      <div class="ms-2">this field is required</div>
-                                      } @if(registrationForm.controls["LastName"].errors?.["minlength"] ) {
-                                      <div> name is short </div>
-                                      }@else if( registrationForm.controls["LastName"].errors?.["pattern"]) {
-                                      <div>Plz! enter valid name</div>
-                                      }
-                                    </div>
-                                    }
-                                
-        
-                            </div>
-                            <div class="input1 email">
-                                <input type="text" placeholder="Email Address:" name="EmailAddress" formControlName="email" (keyup)="hideError()">
-                                <div class="error_api mt-2" *ngIf="hideErrorApi">{{registrationErrorEmail}}</div>
-                                @if(registrationForm.controls["email"].touched && registrationForm.controls["email"]){
-                                    <div id="email" class="form-text text-danger">
-                                      @if (registrationForm.controls["email"].errors?.["required"]) {
-                                      <div class="ms-2">this field is required</div>
-                                      } @if(registrationForm.controls["email"].errors?.["minlength"] ) {
-                                      <div> email is short </div>
-                                      }@else if( registrationForm.controls["email"].errors?.["pattern"]) {
-                                      <div>Plz! enter valid email</div>
-                                      }
-                                    </div>
-                                    }
-                            </div>
-                            <div class="input1 password">
-                                <input type="text" placeholder="Create Password:" name="CreatePassword" formControlName="password">
-                                <div class="error_api">{{registrationErrorPass}}</div>
-                                @if(registrationForm.controls["password"].touched && registrationForm.controls["password"]){
-                                    <div id="password" class="form-text text-danger">
-                                      @if (registrationForm.controls["password"].errors?.["required"]) {
-                                      <div class="ms-2">this field is required</div>
-                                      } @if(registrationForm.controls["password"].errors?.["minlength"] ) {
-                                      <div> password is short </div>
-                                      }@else if( registrationForm.controls["password"].errors?.["pattern"]) {
-                                      <div>Plz! enter valid password</div>
-                                      }
-                                    </div>
-                                    }
-        
-                            </div>
-                            <div class="input1 d-flex  align-items-center">
-                                <input type="checkbox" name="agree" class="terms" id="" >
-                                <span class="ms-2 w-75">i agree to the terms and privacy policy</span>
-                            </div>
-                            <div class="input1">
-                                <button type="submit" class="text-white create_account">Create an account</button>
-                            </div> 
-                        </div>
-                       
-                    </form>
-                    <!-- have -->
-                    <div class="have_account">
-                        <span>Already a member? <a href="/login">Login</a></span>
-                    </div>
-                        
+<section class="signin">
+  <div class="conatiner1">
+    <div class="grid_content">
+      <div class="box_img">
+        <img src="../../assets/signin.png" width="300px" alt="" />
+      </div>
+      <div class="box_form d-flex justify-content-center align-items-center">
+        <div class="all_content">
+          <div class="header_form">
+            <h3 class="fw-bold fs-2">Sign in</h3>
+            <p class="text-muted create_account-title">
+              Create your account in a seconds
+            </p>
+          </div>
+          <form
+            action=""
+            method="post"
+            [formGroup]="registrationForm"
+            (ngSubmit)="onSubmit()"
+          >
+            <div class="all_inputs">
+              <div class="input1 firstName">
+                <input
+                  type="text"
+                  placeholder="First Name:"
+                  name="FirstName"
+                  formControlName="name"
+                />
+                <div class="error_api">{{ registrationErrorName }}</div>
+                @if(registrationForm.controls["name"].touched &&
+                registrationForm.controls["name"]){
+                <div id="name" class="form-text text-danger">
+                  @if (registrationForm.controls["name"].errors?.["required"]) {
+                  <div class="ms-2">this field is required</div>
+                  } @if(registrationForm.controls["name"].errors?.["minlength"]
+                  ) {
+                  <div>name is short</div>
+                  }@else if(
+                  registrationForm.controls["name"].errors?.["pattern"]) {
+                  <div>Plz! enter valid name</div>
+                  }
                 </div>
-               
+                }
+              </div>
+              <div class="input1 lastName">
+                <input
+                  type="text"
+                  placeholder="Last Name:"
+                  name="LastName"
+                  formControlName="LastName"
+                />
+                @if(registrationForm.controls["LastName"].touched &&
+                registrationForm.controls["LastName"]){
+                <div id="LastName" class="form-text text-danger">
+                  @if
+                  (registrationForm.controls["LastName"].errors?.["required"]) {
+                  <div class="ms-2">this field is required</div>
+                  }
+                  @if(registrationForm.controls["LastName"].errors?.["minlength"]
+                  ) {
+                  <div>name is short</div>
+                  }@else if(
+                  registrationForm.controls["LastName"].errors?.["pattern"]) {
+                  <div>Plz! enter valid name</div>
+                  }
+                </div>
+                }
+              </div>
+              <div class="input1 email">
+                <input
+                  type="text"
+                  placeholder="Email Address:"
+                  name="EmailAddress"
+                  formControlName="email"
+                  (keyup)="hideError()"
+                />
+                <div class="error_api mt-2" *ngIf="hideErrorApi">
+                  {{ registrationErrorEmail }}
+                </div>
+                @if(registrationForm.controls["email"].touched &&
+                registrationForm.controls["email"]){
+                <div id="email" class="form-text text-danger">
+                  @if (registrationForm.controls["email"].errors?.["required"])
+                  {
+                  <div class="ms-2">this field is required</div>
+                  } @if(registrationForm.controls["email"].errors?.["minlength"]
+                  ) {
+                  <div>email is short</div>
+                  }@else if(
+                  registrationForm.controls["email"].errors?.["pattern"]) {
+                  <div>Plz! enter valid email</div>
+                  }
+                </div>
+                }
+              </div>
+              <div class="input1 password">
+                <input
+                  type="text"
+                  placeholder="Create Password:"
+                  name="CreatePassword"
+                  formControlName="password"
+                />
+                <div class="error_api">{{ registrationErrorPass }}</div>
+                @if(registrationForm.controls["password"].touched &&
+                registrationForm.controls["password"]){
+                <div id="password" class="form-text text-danger">
+                  @if
+                  (registrationForm.controls["password"].errors?.["required"]) {
+                  <div class="ms-2">this field is required</div>
+                  }
+                  @if(registrationForm.controls["password"].errors?.["minlength"]
+                  ) {
+                  <div>password is short</div>
+                  }@else if(
+                  registrationForm.controls["password"].errors?.["pattern"]) {
+                  <div>Plz! enter valid password</div>
+                  }
+                </div>
+                }
+              </div>
+              <div class="input1 d-flex align-items-center">
+                <input type="checkbox" name="agree" class="terms" id="" />
+                <span class="ms-2 w-75"
+                  >i agree to the terms and privacy policy</span
+                >
+              </div>
+              <div class="input1">
+                <button type="submit" class="text-white create_account">
+                  Create an account
+                </button>
+              </div>
             </div>
-
+          </form>
+          <!-- have -->
+          <div class="have_account">
+            <span>Already a member? <a routerLink="login">Login</a></span>
+          </div>
         </div>
-
+      </div>
     </div>
-
+  </div>
 </section>
 
-<div *ngIf="loading;">
-<div>d
-
-</div> 
- </div>
+<div *ngIf="loading">
+  <div>d</div>
+</div>

@@ -36,7 +36,7 @@ export class AuthGuard implements CanActivate {
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
    // return false;
     if(localStorage.getItem("Admin")=="true"){
-        this.router.navigate(['/checkout']);
+        // this.router.navigate(['/checkout']);
         console.log("0g");
          return true
 

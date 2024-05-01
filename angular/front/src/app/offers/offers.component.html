@@ -16,8 +16,7 @@
             <div class="box">
                 <img src="assets/sofa.jpg" alt="">
             </div> -->
-      @for (product of products; track $index) {
-
+      @for (product of products; track $index) { @if ( product.id <= 4) {
       <div class="col">
         <div
           class="card"
@@ -90,8 +89,8 @@
           </div>
         </div>
       </div>
-      }
+      } }
     </div>
-    <button class="btn my-btn">Show All</button>
+    <a routerLink="Products" class="btn my-btn">Show All</a>
   </div>
 </div>

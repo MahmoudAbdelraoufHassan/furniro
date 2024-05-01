@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from 'express';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
    Admin:any;
-  constructor(private httpApiLogin:HttpClient) { }
+  
+  constructor(private httpApiLogin:HttpClient , private router : Router) { }
 // for login user | admin
   baseApiLogin="http://127.0.0.1:8000/api/v1/auth/login";
   Login(userData:any) {
@@ -18,10 +20,10 @@ export class LoginService {
     this.Admin=val;
     localStorage.setItem("Admin",this.Admin)
     console.log(localStorage.getItem("Admin"));
-    
     return val;
   }
 
+  
 
 
 }

@@ -3,13 +3,13 @@ import "./signin.component.css";
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, ReactiveFormsModule,FormGroup,Validators, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-signin',
   standalone: true,
-  imports: [ReactiveFormsModule,FormsModule,HttpClientModule,NgIf],
+  imports: [ReactiveFormsModule,FormsModule,HttpClientModule,NgIf,RouterLink,RouterLinkActive],
   templateUrl: './signin.component.html',
   styleUrl: './signin.component.css'
 })
